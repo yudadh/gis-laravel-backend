@@ -15,7 +15,7 @@ Instalasi :
 
         body : {
                     "email"     : "manpits@gmail.com",
-                    "password"  : "123456"
+                    "password"  : "123456",
                     "name"      : "manpits"
                 }    
 
