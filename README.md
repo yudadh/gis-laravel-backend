@@ -1,11 +1,11 @@
 Instalasi :
 
 1. Buat sebuah folder baru, kemudian pull repo ini
-	mkdir api-test
-	cd api-test
-	git init
-	git remote add origin https://github.com/manpits/api-jwt-master.git
-	git pull origin main
+	<br>mkdir api-test
+	<br>cd api-test
+	<br>git init
+	<br>git remote add origin https://github.com/manpits/api-jwt-master.git
+	<br>git pull origin main
 
 2. Buat file konfigurasi dengan cara mengcopy file .env.example menjadi .env
 3. Buatlah sebuah database baru pada server database mysql anda
