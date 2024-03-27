@@ -1,11 +1,11 @@
 Instalasi :
 
 1. Buat sebuah folder baru, kemudian pull repo ini, contoh
-	<br>mkdir api-test
-	<br>cd api-test
-	<br>git init
-	<br>git remote add origin https://github.com/manpits/api-jwt-master.git
-	<br>git pull origin main
+	<br>&nbsp;mkdir api-test
+	<br>&nbsp;cd api-test
+	<br>&nbsp;git init
+	<br>&nbsp;git remote add origin https://github.com/manpits/api-jwt-master.git
+	<br>&nbsp;git pull origin main
 
 2. Buat file konfigurasi dengan cara mengcopy file .env.example menjadi .env
 3. Buatlah sebuah database baru pada server database mysql anda
@@ -16,31 +16,31 @@ Instalasi :
 8. Jalankan perintah "php artisan key:generate" untuk mengenerate key-aplikasi
 9. Gunakan aplikasi api client (Postman atau ThunderClient (vscode)) untuk mengakses API, contoh :
 
-    <br>- Untuk register user
-    <br>    POST    /api/register
+    <br>&nbsp;- Untuk register user
+    <br>&nbsp;&nbsp;    POST    /api/register
     <br>
-    <br>    body : {
-    <br>                "email"     : "manpits@gmail.com",
-    <br>                "password"  : "123456",
-    <br>                "name"      : "manpits"
-    <br>            }    
+    <br>&nbsp;&nbsp;    body : {
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;                "email"     : "manpits@gmail.com",
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;                "password"  : "123456",
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;                "name"      : "manpits"
+    <br>&nbsp;&nbsp;            }    
     <br>
-    <br>- Untuk login user
-    <br>    POST /api/login
+    <br>&nbsp;- Untuk login user
+    <br>&nbsp;&nbsp;    POST /api/login
     <br>
-    <br>    body : {
-    <br>                "email"     : "manpits@gmail.com",
-    <br>                "password"  : "123456"
-    <br>            }    
+    <br>&nbsp;&nbsp;    body : {
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;                "email"     : "manpits@gmail.com",
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;                "password"  : "123456"
+    <br>&nbsp;&nbsp;            }    
 
 10. Untuk selengkapnya silahkan nanti tambahkan routes yang anda miliki di file routes/api.php
 
-    <br>Route::post('login', [ApiController::class, 'authenticate']);
-    <br>Route::post('register', [ApiController::class, 'register']);
-    <br>Route::group(['middleware' => ['jwt.verify']], function () {
-    <br>    Route::get('logout', [ApiController::class, 'logout']);
-    <br>    Route::get('getuser', [ApiController::class, 'get_user']);
-    <br>    /**
-    <br>    * Silahkan tambahkan routes anda disini ...
-    <br>    */
-    <br>});
+    <br>&nbsp;Route::post('login', [ApiController::class, 'authenticate']);
+    <br>&nbsp;Route::post('register', [ApiController::class, 'register']);
+    <br>&nbsp;Route::group(['middleware' => ['jwt.verify']], function () {
+    <br>&nbsp;&nbsp;    Route::get('logout', [ApiController::class, 'logout']);
+    <br>&nbsp;&nbsp;    Route::get('getuser', [ApiController::class, 'get_user']);
+    <br>&nbsp;&nbsp;    /**
+    <br>&nbsp;&nbsp;    * Silahkan tambahkan routes anda disini ...
+    <br>&nbsp;&nbsp;    */
+    <br>&nbsp;});
